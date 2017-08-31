@@ -5,9 +5,17 @@ class Persona {
 	public function hablar(){
 	    echo "soy ". " ".$this->nombre." y estoy hablando";
 	}
+	public function acariciar($perrito){
+   $perrito->moverCola();
+	}
 	
 }
-	
+class Perro {
+	public $nombre;
+	public function moverCola(){
+	    echo "muevo la Cola";
+	}
+}
 $p = new Persona();
 $p->nombre = "Micaela";
 $p->apellido = "Baravalle";
@@ -21,4 +29,9 @@ echo "<br>";
 $p->hablar();
 echo "<br>";
 $p1->hablar();
+$perro = new Perro();
+echo "<br>";
+$perro-> moverCola();
+echo "<br>";
+$p->acariciar($perro);
 ?>
